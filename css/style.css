@@ -347,9 +347,11 @@ footer{
         gap: 1rem;
     }
 
-    .act_card{
-        height: 20rem;
+    .act_pic{
+        height: 15rem;
+        width: 15rem;
     }
+    
 
 }
 
