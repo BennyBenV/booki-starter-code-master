@@ -123,7 +123,8 @@ a {
 }
 
 /* Mon CSS */
-/* METTRE SUR GITHUB */
+/* Hebergements trop a gauche et image de heb a marseille*/
+/* fa-info jouer avec width height */
 
 #logo{
     height: 1rem;
@@ -254,7 +255,6 @@ form{
     border-radius: 100%;
     border: 2px solid var(--main-bg-color);
     padding: 1rem;
-
 }
 
 .act{
@@ -357,5 +357,78 @@ footer{
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .menu{
+        display: flex;
+        gap: 5rem;
+    }
+
+    .ligne{
+        height: 2px;
+        width: 100rem;
+        background-color: #F2F2F2;
+        
+    }
+
+    .rubrique:hover {
+        border-top: none;
+    }
+
+    .rubrique:hover + .ligne{
+        background-color: var(--main-color);
+    }
+
+    .recherche>h1{
+        font-size: x-large;
+    }
+
+    .main-container{
+        padding: 1rem;
+    }
+
+    .filtres{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .fil:nth-child(2){
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .fil:nth-child(3n){
+        grid-area: 2 / 2 / 3 / 3;
+
+    }
+
+    .fil:nth-child(4){
+        grid-area: 3 / 1 / 4 / 2;
+
+    }
+
+    .fil:nth-child(5){
+        grid-area: 3 / 2 / 4 / 3;
+
+    }
+    .fil{
+        display: flex;
+        justify-content: center;
+    }
+
+    form{
+        margin-bottom: 1rem;
+    }
+
+
+
+
+
 }
