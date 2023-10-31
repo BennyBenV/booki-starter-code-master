@@ -59,6 +59,10 @@ a {
     color: var(--main-bg-color)
 }
 
+img{
+    object-fit: cover;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -240,17 +244,25 @@ form {
     flex-direction: row;
     gap: 1rem;
     margin-bottom: 2rem;
+    
 }
 
 .fa-info {
     border-radius: 100%;
     border: 2px solid var(--main-bg-color);
     padding: 1rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 /* -----------------------------------------Hébergements à Marseille / Populaires---------------------------------------------------- */
+
+/* Les photos sont "coupés" en bas */
 
 .titre-marseille {
     margin-bottom: 1rem;
@@ -268,8 +280,9 @@ form {
 }
 
 .chambre {
-    border-radius: 1rem;
     height: 10rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 
 }
 
@@ -279,6 +292,9 @@ form {
     gap: 1rem;
 }
 
+#afficher-plus{
+    margin: 1rem;
+}
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 
@@ -427,14 +443,14 @@ footer {
 
     /* --------------------------------------------------Header-------------------------------------------------------------------------- */
 
-    .menu-rub {
+    .rubrique {
         border-bottom: solid #F2F2F2;
         padding-bottom: 1rem;
         width: 100%;
         text-align: center;
     }
 
-    .menu-rub:hover {
+    .rubrique:hover{
         border-bottom: solid var(--main-color);
     }
 
@@ -450,27 +466,35 @@ footer {
         align-items: center;
         gap: 1rem;
         margin-bottom: 2rem;
+        margin-right: 0;
+        margin-left: 0;
     }
     
     .menu {
         display: flex;
         gap: 0;
-        justify-content: center;
-        width: 120%;
+        justify-content: space-around;
+        width: 100%;
         
     }
     
     .rubrique:hover {
         border-top: none;
     }
-    
-    .rubrique:hover+.ligne {
-        background-color: var(--main-color);
+
+    .menu-rub{
+        width: 100%;
     }
+    .menu-rub > a{
+        display: block;
+        width: 100%;
+    }
+    
+
     /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 /* --------------------------------------------Barre de recherche-------------------------------------------------------------------- */
-
+/* Mettre la barre de recherche au centre */
     .rechercher {
         width: 3rem;
     }
@@ -490,6 +514,7 @@ footer {
     
     form {
         margin-bottom: 1rem;
+        justify-content: center;
     }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -529,14 +554,6 @@ footer {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
-/* -------------------------------------------Information---------------------------------------------------------------------------- */
-
-    .fa-info {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        height: 1rem;
-    }
 
 /* ---------------------------------------------Hébergements à Marseille / Populaire------------------------------------------------ */
 
@@ -580,9 +597,7 @@ footer {
         width: 90%;
     }
 
-    #afficher-plus {
-        margin: 1rem;
-    }
+
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
