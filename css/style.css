@@ -59,9 +59,7 @@ a {
     color: var(--main-bg-color)
 }
 
-img{
-    object-fit: cover;
-}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -130,7 +128,12 @@ img{
 
 /* Mon CSS */
 
+img{
+    object-fit: cover;
+}
+
 /* ----------------------------------------------Header----------------------------------------------------------------------- */
+
 
 #logo {
     height: 1rem;
