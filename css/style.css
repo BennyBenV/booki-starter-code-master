@@ -134,6 +134,10 @@ img{
 
 /* ----------------------------------------------Header----------------------------------------------------------------------- */
 
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 #logo {
     height: 1rem;
@@ -147,6 +151,7 @@ a {
 header {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0 4rem 0;
 }
 
 .menu {
@@ -161,6 +166,10 @@ header {
     height: auto;
 }
 
+.rubrique{
+    padding-top: 0.8rem;
+}
+
 
 .rubrique:hover {
     color: var(--main-color);
@@ -171,6 +180,20 @@ header {
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 /* ------------------------------------------------Barre de recherche---------------------------------------------------------------- */
+
+.recherche>h1{
+    margin-bottom: 0;
+}
+
+.recherche>p{
+    margin-top: 0.5rem;
+}
+
+.search-bar{
+    margin-top: 2rem;
+}
+
+
 form {
     display: flex;
     margin-bottom: 3rem;
@@ -237,6 +260,13 @@ form {
     background-color: #DEEBFF;
 }
 
+.list-fil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
 /* -----------------------------------Informations----------------------------------------------------------------------------------- */
@@ -246,6 +276,7 @@ form {
     flex-direction: row;
     gap: 1rem;
     margin-bottom: 2rem;
+    align-items: center;
     
 }
 
@@ -266,6 +297,10 @@ form {
 
 /* Les photos sont "coupés" en bas */
 
+.hebergements-and-populaires{
+    margin-bottom: 4rem;
+}
+
 .titre-marseille {
     margin-bottom: 1rem;
 }
@@ -274,7 +309,6 @@ form {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 14.8rem;
     border-radius: 1rem;
     padding: 0.5rem;
     box-shadow: 0px 3px 15px 0px #0000001A;
@@ -282,7 +316,7 @@ form {
 }
 
 .chambre {
-    height: 10rem;
+    height: 7rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 
@@ -292,10 +326,16 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.marseille{
+    width: 31%;
 }
 
 #afficher-plus{
-    margin: 1rem;
+    padding-top: 1rem;
 }
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -307,17 +347,19 @@ form {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 5rem;
+    gap: 1rem;
 }
 
 .act_card {
-    width: 20rem;
     overflow: hidden;
     box-shadow: 0px 3px 15px 0px #0000001A;
     border-radius: 1rem;
+    width: 25%;
 }
 
 .act_pic {
     height: 30rem;
+    width: 100%;
 }
 
 .act-nom {
@@ -336,7 +378,8 @@ footer {
 .foot {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 2rem 2rem 0rem 2rem;
 }
 
 .apropos {
@@ -364,7 +407,20 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    /* -----------------------------------------Filtres---------------------------------------------------------------------------------- */
+    .filtres{
+        flex-direction: column;
+        margin-bottom: 2rem;
+        gap: 0;
+    }
 
+
+
+    .list-fil{
+        justify-content: unset;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------------------------------------- */
 
     /* -----------------------------------------Hébergements à Marseille----------------------------------------------------------------- */
 
@@ -504,6 +560,7 @@ footer {
     .fa-magnifying-glass {
         display: flex;
         justify-content: center;
+        color: #ffffff;
     }
     
     .texte-rechercher {
@@ -523,28 +580,27 @@ footer {
 
 /* -------------------------------------------------Filtres-------------------------------------------------------------------------- */
 
-    .filtres {
+    .list-fil {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
         gap: 1rem;
     }
 /* Utilisation du grid pour placer les filters */
-    .fil:nth-child(2) {
+    .fil:nth-child(1) {
         grid-area: 2 / 1 / 3 / 2;
     }
 
-    .fil:nth-child(3n) {
+    .fil:nth-child(2) {
         grid-area: 2 / 2 / 3 / 3;
 
     }
 
-    .fil:nth-child(4) {
+    .fil:nth-child(3) {
         grid-area: 3 / 1 / 4 / 2;
 
     }
 
-    .fil:nth-child(5) {
+    .fil:nth-child(4) {
         grid-area: 3 / 2 / 4 / 3;
 
     }
